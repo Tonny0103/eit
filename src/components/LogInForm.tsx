@@ -28,12 +28,7 @@ export function LogInForm() {
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    fetch("/api/login", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-  }
+  function onSubmit(data: z.infer<typeof FormSchema>) {}
 
   return (
     <Form {...form}>
