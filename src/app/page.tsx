@@ -1,20 +1,16 @@
-"use client";
-import Directions from "@/components/Directions";
-import { APIProvider, Map } from "@vis.gl/react-google-maps";
+import { LogInForm } from "@/components/LogInForm";
+import React from "react";
 
-export default function Home() {
+const page = () => {
   return (
-    <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY!}>
-      <Map
-        style={{ width: "100vw", height: "100vh", position: "static" }}
-        defaultCenter={{ lat: -16.0817841, lng: -57.6783666 }}
-        defaultZoom={15}
-        gestureHandling={"greedy"}
-        disableDefaultUI={false}
-        fullscreenControl={false}
-      >
-        <Directions />
-      </Map>
-    </APIProvider>
+    <main className="flex flex-col min-h-screen justify-center items-center gap-4">
+      <div>
+        <h1 className="text-2xl font-bold">Bem vindo de volta!</h1>
+        <p>Faça seu login para continuar</p>
+      </div>
+      <LogInForm />
+    </main>
   );
-}
+};
+
+export default page;
