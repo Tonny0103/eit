@@ -10,6 +10,7 @@ const page = async () => {
       <div className="flex justify-center">
         {orders.map((order) => (
           <Order
+            key={order.name}
             name={order.name}
             cell={order.cell}
             description={order.description}
